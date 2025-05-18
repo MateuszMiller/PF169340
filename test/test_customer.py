@@ -131,27 +131,36 @@ class TestCustomer(unittest.TestCase):
 
     def test_buy_ticket(self):
         test_cases = [
-            ("valid_movie",
-             Movie("Movie A",
-                   "Action",
-                   120,
-                   18,
-                   "Director A",
-                   "EN",
-                   2022,
-                   8.0,
-                   "Description A"), True),
             (
-            "age_restricted",
-            Movie("Movie B",
-                  "Drama",
-                  120,
-                  30,
-                  "Director B",
-                  "EN",
-                  2020,
-                  7.5,
-                  "Description B"), ValueError),
+                "valid_movie",
+                Movie(
+                    "Movie A",
+                    "Action",
+                    120,
+                    18,
+                    "Director A",
+                    "EN",
+                    2022,
+                    8.0,
+                    "Description A"
+                ),
+                True
+            ),
+            (
+                "age_restricted",
+                Movie(
+                    "Movie B",
+                    "Drama",
+                    120,
+                    30,
+                    "Director B",
+                    "EN",
+                    2020,
+                    7.5,
+                    "Description B"
+                ),
+                ValueError
+            ),
             ("invalid_object", "NotAMovie", ValueError),
         ]
 
