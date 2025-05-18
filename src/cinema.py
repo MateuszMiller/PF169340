@@ -14,7 +14,6 @@ class Cinema:
     def __str__(self):
         return f"Cinema: {self.name}, {self.address}"
 
-    # Staff management
     def assign_staff(self, staff_member):
         if staff_member is None:
             raise ValueError("Staff member cannot be None.")
@@ -34,7 +33,6 @@ class Cinema:
             raise ValueError("Staff member is already added.")
         self.staff.append(staff_member_to_add)
 
-    # Movie management
     def add_movie(self, staff_member, movie):
         if staff_member is None or movie is None:
             raise ValueError("Staff member and movie cannot be None.")
@@ -71,7 +69,6 @@ class Cinema:
             if movie not in self.schedule:
                 self.schedule.append(movie)
 
-    # Movie queries
     def list_movies(self):
         return [movie.title for movie in self.schedule]
 
@@ -113,7 +110,6 @@ class Cinema:
                       if not (s.first_name == first_name
                               and s.last_name == last_name)]
 
-    # Serialization
     def to_dict(self):
         return {
             "name": self.name,

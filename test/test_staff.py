@@ -39,7 +39,7 @@ class TestStaff(unittest.TestCase):
         for (case_name, shifts, expected_behavior,
              expected_result) in test_cases:
             with self.subTest(case=case_name):
-                staff = Staff("Anna", "Nowak", "manager")  # <<< FIX
+                staff = Staff("Anna", "Nowak", "manager")
 
                 if expected_behavior == ValueError:
                     staff.assign_shift(*shifts[0])
@@ -176,7 +176,7 @@ class TestStaff(unittest.TestCase):
 
         for case, new_pos, expected in test_cases:
             with self.subTest(case=case):
-                staff.position = "worker"  # reset
+                staff.position = "worker"
                 if expected == ValueError:
                     with self.assertRaises(ValueError):
                         staff.change_position(new_pos)

@@ -47,7 +47,7 @@ class Customer:
                              "age restriction for this movie.")
         self.ticket_history.append(movie)
         movie.watch()
-        self.loyalty_points += 10  # earn points per movie
+        self.loyalty_points += 10
         return True
 
     def get_watch_history(self):

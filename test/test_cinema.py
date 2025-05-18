@@ -235,7 +235,7 @@ class TestCinema(unittest.TestCase):
                                     1999,
                                     8.7,
                                     "Reality is an illusion")],
-                None  # brak wyjątku
+                None
             ),
             (
                 "movies_list_is_none",
